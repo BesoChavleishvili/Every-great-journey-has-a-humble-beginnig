@@ -2,10 +2,7 @@
 #include <thread>
 #include <chrono>
 #include <string>
-int main() {
-    std::string input;
-    while (std::cin >> input) {
-        std::string target = input;
+void ascii_locker(const std::string& target) {
         std::string result;
         for (char t : target) {
             for (char c = 32; c <= 126; ++c) {
@@ -18,4 +15,12 @@ int main() {
             }
         }
     }
+ void run_function_ascii_locker() {
+     std::string input;
+    while (std::cin >> input) {
+        ascii_locker(input);
+    }
+}
+int main() {
+    run_function_ascii_locker();
     }
