@@ -2,6 +2,14 @@
 #include <thread>
 #include <chrono>
 #include <string>
+bool validation(const std::string input) {
+    for (auto c : input) {
+        if (c < 32 || c > 126) {
+            return false;
+        }
+         return true;
+    }
+}
 void ascii_locker(const std::string& target) {
         std::string result;
         for (char t : target) {
@@ -17,7 +25,10 @@ void ascii_locker(const std::string& target) {
     }
  void run_function_ascii_locker() {
      std::string input;
-    while (std::cin >> input) {
+     while (std::getline(std::cin,input)) {
+         if(!validation(input)){
+             std::cerr << "Error: Input contains non-printable ASCII characters" << std::endl;
+         }
         ascii_locker(input);
     }
 }
