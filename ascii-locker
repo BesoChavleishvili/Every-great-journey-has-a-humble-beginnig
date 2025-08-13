@@ -7,8 +7,8 @@ bool validation(const std::string input) {
         if (c < 32 || c > 126) {
             return false;
         }
-         return true;
     }
+ return true;
 }
 void ascii_locker(const std::string& target) {
         std::string result;
