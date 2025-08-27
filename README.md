@@ -1,2 +1,2 @@
-# Every-great-journey-has-a-humble-beginnig
+# Every-great-journey-has-a-humble-begining
 A C++ program that reads a string from standard input and animates each character by cycling through all printable ASCII characters until the correct one is reached.
